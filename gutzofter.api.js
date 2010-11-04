@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
 
     inject.fn = inject.prototype = {
         Init: function() {
-
+            $('#ext_container').html('hello this text is injected');
             return this;
         }
     };
