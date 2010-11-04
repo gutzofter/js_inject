@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
 
     inject.fn = inject.prototype = {
         Init: function() {
-            var url = "http://gutzofter.herobo.com/js_inject/jsonp.php";
+            var url = "http://gutzofter.herobo.com/js_inject/jsonp.php?&jsoncallback=?";
             $.getJSON(url, function(response) {
                 if (response.success) {
                     $('#ext_container').html(response.html);
