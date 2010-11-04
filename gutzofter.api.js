@@ -5,3 +5,21 @@
  * Time: 11:02 AM
  * To change this template use File | Settings | File Templates.
  */
+jQuery(document).ready(function() {
+    var myInject = inject();
+});
+
+(function(window) {
+    var inject = function() {
+        return new inject.fn.Init();
+    };
+
+    inject.fn = inject.prototype = {
+        Init: function() {
+
+            return this;
+        }
+    }
+
+    window.inject = inject;
+})(window);
