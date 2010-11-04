@@ -16,7 +16,13 @@ jQuery(document).ready(function() {
 
     inject.fn = inject.prototype = {
         Init: function() {
-            $('#ext_container').html('hello this text is injected');
+            var url = "http://gutzofter.herobo.com/js_inject/jsonp.php";
+            $.getJSON(url, function(response) {
+                if (response.success) {
+                    $('#ext_container').html(response.html);
+                }
+            });
+
             return this;
         }
     };
