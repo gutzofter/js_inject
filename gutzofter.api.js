@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 
             return this;
         }
-    }
+    };
 
     window.inject = inject;
 })(window);
